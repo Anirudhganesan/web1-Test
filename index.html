@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <style>
+    body {
+      background: rgb(107,195,34);
+background: linear-gradient(0deg, rgba(107,195,34,1) 0%, rgba(253,187,45,1) 69%);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    nav ul {
+      font-family: cursive;
+      background: linear-gradient(to right, #f87e0b, #FFFFFF, #138808);
+      text-shadow: #FC0 1px 0 10px;
+      color: #868376;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      color: #000;
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: #fafafa;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2, h3, h4 {
+      color: #333;
+      margin-top: 20px;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* Custom styles for the container-1 div and carousel */
+    .container-1 {
+      position: relative; 
+      display: flex;
+      box-shadow: 2px 2px 20px 2px black;
+      flex-direction: row;
+      background-color: rgba(255, 255, 255, 0.5); /* Less opacity color */
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .container-1 > div {
+      text-align: center;
+      width: calc(33.33% - 20px); /* Occupy 1/3 of the page width with 20px spacing */
+      max-width: 800px; /* Set a maximum width for the carousel div */
+      margin: 10px;
+      padding: 20px;
+    }
+
+    .carousel-item {
+      text-align: center;
+    }
+
+    .carousel-item img {
+      width: 400px;
+      height: 350px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .carousel-item h4 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .carousel-item p {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    padding-top: 40vh; /* Adjust this value to position the heading */
+    color: #fff; /* Set the text color for the heading */
+    font-size: 3rem; /* Adjust the font size as needed */
+	font-family: cursive;
+	font-kerning: auto;
+	font-stretch: ultra-expanded;
+	text-shadow: 1px 1px 2px #ff8000, 0 0 1em blue, 0 0 0.2em #40ff00;
+  font-weight: 300;
+  font-size: 40px;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+.container4 {
+  color: #ffffff;
+  background-color;
+  text-align: center;
+  padding: 50px 80px;
+  transition: all 0.5s ease;
+}
+.container4 input {
+  width: 50%;
+  text-align: center;
+  height: 50px;
+  justify-content: center;
+  border-radius: 25px;
+}
+.submit {
+  margin: 10%;
+  text-align: center;
+}
+.submitbtn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 10px 0px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 55px;
+  transition: all 0.4s ease-in-out;
+}
+.submitbtn-hover:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+}
+.submitbtn-hover:focus {
+  outline: none;
+}
+.submitbtn-hover.color {
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+  </style>
+<head>
+ <title>Video Background Heading</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="images/back.mp4" type="video/mp4">
+            <!-- Add additional source tags for other video formats (WebM, etc.) -->
+        </video>
+        <h1>LAND OF GOLDEN BIRDS</h1>
+    </div>
+</head>
+<body>
+   
+   
+  <nav>
+    <ul>
+      <li><a href="#about">ABOUT INDIA</a></li>
+      <li><a href="#culture">CULTURE</a></li>
+      <li><a href="#tourism">TOURISM</a></li>
+      <li><a href="#geography">GEOGRAPHY</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div>
+        <h2 style="text-align: center;font-weight: bolder;">About India</h2>
+      </div>
+      <section id="about" style="display: flex; align-items: center;">
+        <img id="img" src="https://wallpaperaccess.com/full/962324.jpg" alt="India Image" style="width: 400px; height: 300px; border-radius: 5px 5px 0 0; box-shadow: 2px 2px 20px 2px black; margin-right: 20px;">
+        <p style="text-align: justify; font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; font-size: 16px; font-weight: bold;">
+          India's earliest known civilization arose about 5,000 years ago on the Indus River in what is now Pakistan. Archaeologists uncovered the remains of two huge cities with brick houses, piped water, and sewer systems. Nobody knows why, but these cities, called Harappa and Mohenjo Daro, were abandoned in 1700 B.C.
+      
+          The Aryan people were farmers from Central Asia who arrived in India around 1500 B.C. They spoke Sanskrit, one of the world's oldest known languages. The Vedic Scriptures, writings that form the basis of the Hindu religion, were written during the Aryan reign.
+      
+          In the 200-year reign of the Gupta Empire, starting in the fourth century A.D., arts, crafts, and sciences flourished. During this time, the Indian astronomer Aryabhatta determined that the Earth revolved around the sun. This was long before the Western world accepted the theory.
+      
+          Beginning in the 16th century, following a series of invasions by Muslim forces, a Mongol leader named Babur founded the Mongol Empire. The Mongols oversaw a golden age of art, literature, and architecture in India between 1527 and 1707. They built roads, mosques, gardens, and enormous tombs, including the grand Taj Mahal.
+      
+          In the late 1400s, Europeans arrived in India and began setting up trading companies. In 1757, Britain gained control over most of the country. Uprisings against British rule began in 1856. In 1920, the famous Mahatma Gandhi began nonviolent protests to push the British out. In 1947, India had independence.
+        </p>
+      </section>
+      
+    <br>
+    <h3 style="font-weight: bolder;text-align: center">Incredible Scenes Of India</h3>
+    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/dphagk4O5qA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <br>
+    <br>
+    <div>
+        <h2 style="text-align: center;font-weight: bolder;">Culture</h2>
+      </div>
+      <section id="culture" style="display: flex; align-items: center;">
+        <img id="img" src="https://www.dsij.in/Portals/0/magazine_web_content/ArticleImages/3422/spr.jpg" alt="Culture Image" style="width: 500px; height: 400px; border-radius: 5px 5px 0 0; box-shadow: 2px 2px 20px 2px black; margin-right: 20px;">
+        <p style="text-align: justify; font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; font-size: 16px; font-weight: bold;">
+            Society throughout India is divided into social ranks, called castes. Caste is determined by birth and there is almost no way to change it. High castes include priests, landowners, and soldiers. So-called Untouchables have no caste and do the most menial jobs.
+
+            India is a very spiritual country. It has no official religion, but more than 80 percent of Indians are Hindu. About 13 percent are Muslim. Other religions include Buddhism, Sikhism, and Jainism, which all began in India.
+        </p>
+      </section>
+      <div>
+        <h2 style="text-align: center;font-weight: bolder;">Tourism</h2>
+      </div>
+      <section id="tourism" style="display: flex; align-items: center;">
+        <p style="text-align: justify; font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; font-size: 16px; font-weight: bold;">		
+        India is a country that attracts millions of tourists every year and is considered one of the most popular tourist destinations in the world. These visitors are attracted to its natural beauty and cultural heritage. It has many historic sites as well like the Taj Mahal, Golden Temple, Red Fort, etc. With so much to offer, it’s no surprise that tourism is one of the main sources of revenue for the country! 
+
+Tourism in India has been seen as a major tool to bring about socio-economic development to the people of the country. India’s tourism industry has grown steadily in recent years. Not only this, India Tourism industry also provides employment opportunities to several people from all parts of the world. There are ample numbers of hotels, resorts, food joints and various other amenities available for tourists arriving in India. 
+
+No wonder Tourism is an important foreign exchange earner for India. The Department of Tourism, Ministry of Civil Aviation, Government of India is the apex body for the largest development and promotion of Indian tourism. To promote tourism in India, the government has been implementing a number of campaigns and schemes. These include Incredible India campaign along with a number of planned events such as the International Travel Mart, Destination India Exhibitions worldwide and Indian Cultural Festivals Abroad to attract foreign tourists.
+		</p>
+        <img id="img" src="https://t4.ftcdn.net/jpg/05/05/51/25/360_F_505512599_D6ulJI9hV6aGTP04FPC2XDk5QHGOQtpW.jpg" alt="Tourism Image" style="width: 500px; height: 400px; border-radius: 5px 5px 0 0; box-shadow: 2px 2px 20px 2px black; margin-right: 20px;">
+      </section>
+    <h3 style="font-weight: bolder; text-align: center;">Famous Attractions</h3>
+    <div id="carouselExample" class="carousel slide container-1" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExample" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExample" data-slide-to="1"></li>
+        <li data-target="#carouselExample" data-slide-to="2"></li>
+        <li data-target="#carouselExample" data-slide-to="3"></li>
+        <li data-target="#carouselExample" data-slide-to="4"></li>
+        <li data-target="#carouselExample" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h4>Taj Mahal</h4>
+          <img src="https://d1whtlypfis84e.cloudfront.net/guides/wp-content/uploads/2019/08/02112702/taj-mahal-1024x682.jpeg" alt="Taj Mahal">
+          <p>
+            The Taj Mahal is an iconic mausoleum in Agra, India. Built by Emperor Shah Jahan in the 17th century, it is known for its symmetrical design, exquisite marble work, and captivating beauty.
+          </p>
+        </div>
+        <div class="carousel-item">
+          <h4>Brihadisvara Temple</h4>
+          <img src="https://www.goldentriangletour.com/userfiles/47cd6a11a4181cf7e04e91e12c67396e_1817.jpg" alt="Brihadisvara Temple">
+          <p>
+            The Brihadisvara Temple, also known as the Brihadeeswara Temple or Big Temple, is a magnificent Hindu temple located in Thanjavur, India. Built in the 11th century by Rajaraja Chola I, it is renowned for its grand architecture and towering vimana (temple tower).
+          </p>
+        </div>
+        <div class="carousel-item">
+          <h4>Red Fort</h4>
+          <img src="https://t4.ftcdn.net/jpg/01/15/24/53/360_F_115245346_vN7bdFfwD3LR4pnG4fa4EtNTArafpodb.jpg" alt="Red Fort">
+          <p>
+            The Red Fort, also known as Lal Qila, is a historic fort complex located in Old Delhi, India. Constructed in the 17th century by Emperor Shah Jahan, it is renowned for its red sandstone walls, architectural grandeur, and significance as a symbol of Mughal power.
+          </p>
+        </div>
+        <div class="carousel-item">
+          <h4>The Holy City of Varanasi</h4>
+          <img src="https://www.planetware.com/photos-large/IND/india-top-attractions-varanasi.jpg" alt="Varanasi">
+          <p>
+            Varanasi, also known as the Holy City, is a sacred place located on the banks of the Ganges River in India. It is renowned for its ancient temples, spiritual practices, and the ritualistic bathing and cremation ceremonies performed along the ghats (steps) of the river.
+          </p>
+        </div>
+        <div class="carousel-item">
+          <h4>Harmandir Sahib: The Golden Temple of Amritsar</h4>
+          <img src="https://www.planetware.com/photos-large/IND/india-top-attractions-harmandir-sahib.jpg" alt="Harmandir Sahib">
+          <p>
+            Harmandir Sahib, commonly known as the Golden Temple, is a sacred Sikh gurdwara situated in Amritsar, India. It is revered as the holiest shrine in Sikhism and attracts pilgrims from all over the world. The temple's stunning golden architecture and serene lake create a deeply spiritual atmosphere.
+          </p>
+        </div>
+        <div class="carousel-item">
+          <h4>Mumbai: The Gateway of India</h4>
+          <img src="https://www.planetware.com/photos-large/IND/india-top-attractions-gateway-india.jpg" alt="Mumbai">
+          <p>
+            Mumbai, often called the Gateway of India, is a bustling city on the western coast of India. The iconic Gateway of India monument stands proudly overlooking the Arabian Sea and symbolizes Mumbai's rich history and status as a major port. It is a popular tourist attraction and a symbol of the city's grandeur.
+          </p>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div>
+        <h2 style="text-align: center;font-weight: bolder;">Geography</h2>
+      </div>
+      <section id="geography" style="display: flex; align-items: center;">
+        <img id="img" src="https://i.natgeofe.com/k/f4ff7959-fa59-4e96-a9e5-d18883528585/India-map_4x3.jpg" alt="Geography Image" style="width: 500px; height: 400px; border-radius: 5px 5px 0 0; box-shadow: 2px 2px 20px 2px black; margin-right: 20px;">
+        <p style="text-align: justify; font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; font-size: 16px; font-weight: bold;">
+            India is part of the continent of Asia. Most of India forms a peninsula, which means it is surrounded by water on three sides. The world's highest mountain range, the Himalaya, rises in the north. The southeast is bordered by the Bay of Bengal, and the southwest is bordered by the Arabian Sea.
+
+            India's terrain varies widely, from the Thar Desert in the west to jungles in the northeast. A fertile area called the Ganges Plain covers much of northern India. This formation was created from soil that was deposited by rivers running from the Himalaya. In some places, this layer of silt is over 25,000 feet (7,620 meters) deep.
+        </p>
+      </section>
+	  <div class="container4">
+  <h1>SUBSCRIBE</h1><p><h2>Be the first one to know what's happening in India.</h2></p>
+<p><form action="php/index.php" method="POST">
+                <input type="text" name="email" id="email" placeholder="Your Email">
+<div class="buttons"><a href="index.html"><button class="submitbtn-hover color" type="button">SUBMIT</button></a>
+</div>
+            </form></p>
+  </div>
+  </main>
+
+  <footer>
+<div class="footer-wrapper">
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+
+                                    <div class="footer-logo mb-35">
+                                        <a href="index.html"><img src="https://th.bing.com/th/id/R.ddf05919f4b02acbeb50f1ab350be7df?rik=hTWkXHX5ro0niQ&riu=http%3a%2f%2fcliparts101.com%2ffiles%2f533%2fFE96F34512084F34C935D1D41B6C18B1%2findianwoman.png&ehk=RAvYuy3hLDKm%2fjKZi918ihuruOGHZA1lv9ZMilGytJw%3d&risl=&pid=ImgRaw&r=0" width="130"></a>
+                                    </div>
+                                    <div class="footer-tittle">
+                                        <div class="footer-pera">
+                                            <p>Finding my soul in the sands of India.</p>
+                                        </div>
+
+                                        <div class="footer-social">
+                                            <a href="https://www.facebook.com/"><img src="https://th.bing.com/th/id/R.e0d3ea6883f9ad72b816dcd23e75372a?rik=fthOvlNXAKYGlA&riu=http%3a%2f%2fhcmiami.clubs.harvard.edu%2fimages%2fvault%2f223.jpg&ehk=g3kL6NqQsyRx%2fNdqRFuJvyyyOl7gQID25PS%2bREd%2bXig%3d&risl=&pid=ImgRaw&r=0" width="30px"></a>
+                                            <a href="https://twitter.com/?lang=en"><img src="https://th.bing.com/th/id/R.959a5abe41d026201295b0051be7ad69?rik=T6PO8I%2fBJPgEOA&riu=http%3a%2f%2fimjustcreative.com%2fwp-content%2fuploads%2f2012%2f06%2fNew-Twitter-Bird-Logo.jpg&ehk=wdzVinn2CXK60%2fsZoIeKOnMXsYSVWYrWHuUjHso89Oc%3d&risl=&pid=ImgRaw&r=0"
+                                                    width="30px"></a>
+                                            <a href="https://www.instagram.com/"><img src="https://logodownload.org/wp-content/uploads/2017/04/instagram-logo.png"
+                                                    width="30px"></a>
+                                            <a href="https://www.youtube.com/"><img src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Emblem-700x394.png" width="30px"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle mb-20">
+                                    <h4>Authors</h4>
+                                    <p>ANIRUDH GANASHEN </p>
+                                    <p>itsmeanirudh@gmail.com</p>
+                                    <p>MIDHUN KRISHNA</p>
+                                    <p>itsmekrishna@gmail.com</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row">
+                            <div class="col-xl-12 ">
+                                <div class="footer-copy-right text-center">
+                                    <p>Copyright © 2021 All rights reserved | KCGI | Web programming I | Final project
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </footer>
+</body>
+</html>
